@@ -1,0 +1,50 @@
+<h1>Contrôleur</h1>
+
+<ul>
+    <li>Instancié via l'attribut <span class="highlight">ng-controller</span></li>
+    <li>Lié à une portion de vue via la variable <span class="highlight">$scope</span></li>
+    <li>Contient la logique métier d'une vue</li>
+</ul>
+
+<div class="page-exemple">
+    <h3>Exemple</h3>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+
+        <tabset class="code">
+            <tab heading="HTML">
+                <pre>
+&lt;div <span class="highlight">ng-controller="MyCtrl"</span>&gt;
+    Prénom : &lt;type="text" ng-model="name"&gt;
+    &lt;button <span class="highlight">ng-click="hello()"</span>&gt;Salutations&lt;/button&gt;
+&lt;/div&gt;
+                </pre>
+            </tab>
+            <tab heading="Javascript">
+                <pre>
+angular.module("app").controller("MyCtrl", function($scope) {
+
+    $scope.name = "Batman";
+
+    $scope.hello = function () {
+        alert("Salut " + $scope.name);
+    }
+});
+                </pre>
+            </tab>
+        </tabset>
+
+    </div>
+    <div class="col-md-6" ng-controller="MyCtrl">
+<pre style="margin-top: 38px">
+Prénom : <input type="text" ng-model="name">
+<button class="btn btn-primary" style="margin-top: 10px" ng-click="hello()">Salutations</button>
+</pre>
+    </div>
+</div>
+
+
+
+

@@ -1,0 +1,70 @@
+<h1>Service</h1>
+
+<ul>
+    <li>Singleton</li>
+    <li>Injéctable</li>
+    <li>Services prédéfinis par Angular ($http, $route, $log, etc.)</li>
+</ul>
+
+<div class="page-exemple">
+    <h3>Exemple</h3>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+
+        <tabset class="code">
+            <tab heading="HTML">
+                <pre>
+&lt;input type="text" ng-model="myHero"&gt;
+&lt;button class="btn btn-primary" ng-click="addHero(myHero)"&gt;
+    Ajouter
+&lt;/button&gt;
+&lt;ul&gt;
+    &lt;li ng-repeat="hero in heroes"&gt;{{ hero }}&lt;/li&gt;
+&lt;/ul&gt;
+                </pre>
+            </tab>
+            <tab heading="Js Contrôleur">
+                <pre>
+app.controller("MyCtrl", function($scope, <span class="highlight">heroService</span>) {
+
+    $scope.heroes = heroService.heroes();
+
+    $scope.addHero = function (hero) {
+        heroService.add(hero);
+    }
+});
+                </pre>
+            </tab>
+            <tab heading="JS Service">
+                <pre>
+angular.module("app").factory("heroService", function() {
+    var heroes = new Array("Batman", "Superman");
+    return {
+        add : function(hero) {
+            heroes.push(hero);
+        },
+        heroes : function() {
+            return heroes;
+        }}
+});
+                </pre>
+            </tab>
+        </tabset>
+
+    </div>
+    <div class="col-md-6" ng-controller="MyCtrl">
+<pre style="margin-top: 38px">
+    <input type="text" ng-model="myHero">
+    <button class="btn btn-primary" ng-click="addHero(myHero)">Ajouter</button>
+<ul>
+    <li ng-repeat="hero in heroes">{{ hero }}</li>
+</ul>
+</pre>
+    </div>
+</div>
+
+
+
+

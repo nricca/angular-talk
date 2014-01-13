@@ -1,0 +1,31 @@
+<h1>Filtres</h1>
+
+<ul>
+    <li>Traitement ou filtrage des données</li>
+    <li>Simplification syntaxique</li>
+    <li>Différents filtres pré-inclues</li>
+    <li>Possibilité de créer ses propres filtres</li>
+</ul>
+
+<div class="page-exemple">
+    <h3>Exemple</h3>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+<pre>
+Input : &lt;input type="text" ng-model="monPrix"&gt;
+Value : <code ng-non-bindable>{{ monPrix | <span class="highlight">currency:"CHF "</span>  }}</code>
+</pre>
+    </div>
+    <div class="col-md-6">
+<pre>
+Input : <input type="number" ng-model="monPrix">
+Value : {{ monPrix | currency:"CHF " }}
+</pre>
+    </div>
+</div>
+
+
+
+

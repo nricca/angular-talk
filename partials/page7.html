@@ -1,0 +1,54 @@
+<h1>Directive</h1>
+
+<ul>
+    <li>Balise HTML personnalisée</li>
+    <li>Syntaxe complète, par attribut ou par classe</li>
+    <li>Propre $scope, template, contrôleur</li>
+    <li>Orienté composant</li>
+</ul>
+
+<div class="page-exemple">
+    <h3>Exemple</h3>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+
+        <tabset class="code">
+            <tab heading="HTML">
+                <pre>
+&lt;superhero skill="le plus fort"&gt;&lt;/superhero&gt;
+&lt;div superhero skill="le plus rapide"&gt;&lt;/div&gt;
+&lt;div class="superhero" skill="le plus grand"&gt;&lt;/div&gt;
+                </pre>
+            </tab>
+            <tab heading="Javscript">
+                <pre>
+angular.module('app')
+    .directive('superhero', function () {
+        return {
+            restrict: 'EAC',
+            template:"&lt;button class='btn btn-block btn-primary'&gt;&lt;/button&gt;",
+            replace:"true",
+            link: function(scope, element, attr) {
+                element.text("Je suis " + attr.skill);
+            }
+        };
+    });
+                </pre>
+            </tab>
+        </tabset>
+
+    </div>
+    <div class="col-md-6" ng-controller="MyCtrl">
+<pre style="margin-top: 38px">
+<superhero skill="le plus fort"></superhero>
+<div superhero skill="le plus rapide"></div>
+<div class="superhero" skill="le plus grand"></div>
+</pre>
+    </div>
+</div>
+
+
+
+

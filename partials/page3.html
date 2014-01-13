@@ -1,0 +1,34 @@
+<h1>Coté HTML</h1>
+
+<ul>
+    <li>Attributs ng-*</li>
+    <li>Initialisation d'Angular via <code ng-non-bindable>ng-app="myApp"</code></li>
+    <li>Data-binding via <code ng-non-bindable>{{ ... }}</code></li>
+</ul>
+
+<div class="page-exemple">
+    <h3>Exemple de binding bidirectionnel</h3>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+<pre>
+&lt;body ng-app="app"&gt;
+    Input 1 : &lt;input type="text" ng-model="monModel"&gt;
+    Input 2 : &lt;input type="text" ng-model="monModel"&gt;
+    Value   : <code ng-non-bindable>{{ monModel }}</code>
+&lt;/body&gt;
+</pre>
+    </div>
+    <div class="col-md-6">
+<pre>
+Input 1 : <input type="text" ng-model="monModel">
+Input 2 : <input type="text" ng-model="monModel">
+Value   : {{ monModel}}
+</pre>
+    </div>
+</div>
+
+
+
+

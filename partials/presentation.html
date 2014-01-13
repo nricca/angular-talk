@@ -1,0 +1,47 @@
+<div ng-switch on="currentPage"
+     class="animate-switch-container container">
+
+    <div class="animate-switch" ng-switch-when="1">
+        <div ng-include="'partials/page1.html'"></div>
+    </div>
+
+    <div class="animate-switch" ng-switch-when="2">
+        <div ng-include="'partials/page2.html'"></div>
+    </div>
+
+    <div class="animate-switch" ng-switch-when="3">
+        <div ng-include="'partials/page3.html'"></div>
+    </div>
+
+    <div class="animate-switch" ng-switch-when="4">
+        <div ng-include="'partials/page4.html'"></div>
+    </div>
+
+    <div class="animate-switch" ng-switch-when="5">
+        <div ng-include="'partials/page5.html'"></div>
+    </div>
+
+    <div class="animate-switch" ng-switch-when="6">
+        <div ng-include="'partials/page6.html'"></div>
+    </div>
+
+    <div class="animate-switch" ng-switch-when="7">
+        <div ng-include="'partials/page7.html'"></div>
+    </div>
+
+    <div class="animate-switch" ng-switch-when="8">
+        <div ng-include="'partials/page8.html'"></div>
+    </div>
+
+    <div class="animate-switch" ng-switch-when="9">
+        <div ng-include="'partials/page9.html'"></div>
+    </div>
+</div>
+
+
+<footer class="container">
+    <ul class="pager">
+        <li ng-class="{disabled : currentPage == 1}"><a href="" ng-click="previous()">&larr; Previous</a></li>
+        <li ng-class="{disabled : currentPage == 9}"><a href="" ng-click="next()">Next &rarr;</a></li>
+    </ul>
+</footer>

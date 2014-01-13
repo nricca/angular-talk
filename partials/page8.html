@@ -1,0 +1,51 @@
+<h1>Routeur</h1>
+
+<ul>
+    <li>Utilisation via <span class="highlight">ng-view</span></li>
+    <li>Associe du contenu à une url (deep linking)</li>
+</ul>
+
+<div class="page-exemple">
+    <h3>Exemple</h3>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+
+        <tabset class="code">
+            <tab heading="HTMssL">
+                <pre>
+&lt;body ng-app="app"&gt;
+    &lt;div ng-view&gt;&lt;/div&gt;
+&lt;/body&gt;
+                </pre>
+            </tab>
+            <tab heading="Javscript">
+                <pre>
+angular.module('app')
+    .config(function ($routeProvider) {
+        $routeProvider
+            .when('/', {
+                templateUrl: 'partials/presentation.html',
+                controller: 'MyCtrl'
+            })
+            .when('/page-de-test', {
+                templateUrl: 'partials/pageDeTest.html',
+                controller: 'MyCtrl'
+            });
+    });
+                </pre>
+            </tab>
+        </tabset>
+
+    </div>
+    <div class="col-md-6">
+<pre style="margin-top: 38px">
+    <a href="#/page-de-test">Aller à la page de test</a>
+</pre>
+    </div>
+</div>
+
+
+
+

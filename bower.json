@@ -1,0 +1,16 @@
+{
+  "name": "angular-talk",
+  "version": "0.0.0",
+  "homepage": "https://github.com/nricca/angular-talk",
+  "authors": [
+    "Nicola Ricca <ricca.nicola@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

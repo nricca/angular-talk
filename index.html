@@ -1,8 +1,22 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Introduction à AngularJS</title>
-  </head>
-  <body>
-    Contenu
-  </body>
+<head>
+    <title>Introduction &agrave; AngularJS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/app.css" rel="stylesheet">
+
+    <!-- JS -->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="assets/js/app.js"></script>
+
+<body ng-app="app" ng-controller="AppCtrl" ng-keydown="keyDown($event)">
+
+<div ng-view></div>
+
+</body>
 </html>
