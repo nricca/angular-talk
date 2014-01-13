@@ -39,8 +39,6 @@ angular.module("app")
 
     $scope.keyDown = function($event) {
 
-        console.log($event.keyCode);
-
         // Right
         if ($event.keyCode == 39) {
             $event.preventDefault();
